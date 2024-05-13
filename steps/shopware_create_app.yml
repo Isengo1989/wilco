@@ -1,0 +1,44 @@
+id: shopware_create_app
+learningObjectives: 
+- Create an app with directory and files
+hints:
+- Create an app
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: keen
+      messages:
+      - text: "So, we recently aquired 5 new companies that all need the same new shipping method. We decided to create an app for this instead of adding the shipping method manually in all these new shops. Can you help us create the app?"
+        delay: 2000
+      - text: "Let me know when you created the directory and share the foldername under which the new app should be placed"
+        delay: 3500
+trigger:
+  type: user_message
+  params: 
+    person: keen
+  flowNode:
+    if:
+      conditions:
+      - conditionId: text_match_regex
+        params:
+          text: "${userMessageText}"
+          regex: custom/apps|apps
+          flags: i
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: keen
+            messages:
+            - text: Nice job! 
+              delay: 1300
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: keen
+            messages:
+            - text: Try again! I'm sure you'll figure this out.
+              delay: 2500
