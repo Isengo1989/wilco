@@ -7,7 +7,7 @@ startFlow:
   do:
   - actionId: bot_message
     params:
-      person: keen
+      person: cody
       messages:
       - text: "So, we recently aquired 5 new companies that all need the same new shipping method. We decided to create an app for this instead of adding the shipping method manually in all these new shops. Can you help us create the app?"
         delay: 2000
@@ -16,7 +16,7 @@ startFlow:
 trigger:
   type: user_message
   params: 
-    person: keen
+    person: cody
   flowNode:
     if:
       conditions:
@@ -29,7 +29,7 @@ trigger:
         do:
         - actionId: bot_message
           params:
-            person: keen
+            person: cody
             messages:
             - text: Nice job! 
               delay: 1300
@@ -38,7 +38,7 @@ trigger:
         do:
         - actionId: bot_message
           params:
-            person: keen
+            person: cody
             messages:
             - text: Try again! I'm sure you'll figure this out.
               delay: 2500
