@@ -12,3 +12,6 @@ skills:
 - backend
 - app
 repository: https://github.com/Isengo1989/Dev
+frameworks:
+  backend:
+    - php
