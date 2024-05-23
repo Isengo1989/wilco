@@ -6,7 +6,8 @@ summary: "We will take a look at the basic structure of a Shopware app and how t
 level: beginner
 steps:
 - shopware_create_app
-duration: 1.5
+- shopware_add_manifest
+duration: 0.5
 skills:
 - frontend
 - backend

@@ -1,0 +1,43 @@
+id: shopware_add_manifest
+learningObjectives: 
+- Create an app with directory and files
+hints:
+- Create an app
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: keen
+      messages:
+      - text: "Ok, lets start with creating the app folder and adding the manifest.xml file to the app directory."
+        delay: 2000
+      - text: "Let's call the app 'ShippingApp'. Can you create the app folder and add the manifest.xml file to the app directory?"
+        delay: 3500
+trigger:
+  type: user_message
+  params: 
+    person: keen
+  flowNode:
+    if:
+      conditions:
+        - conditionId: github_is_file_added
+          paramsFramework:
+            node:
+              fileName: custom/apps/ShippingApp/manifest.xml
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: keen
+            messages:
+            - text: Nice job, you added the manifest.xml! 
+              delay: 1300
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: keen
+            messages:
+            - text: Oups! Did you create the folder and add the manifest.xml file to the app directory?
+              delay: 2500
