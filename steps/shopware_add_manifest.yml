@@ -1,6 +1,6 @@
 id: shopware_add_manifest
 learningObjectives: 
-- Create an app with directory and files
+- Add manifest.xml file to the app directory
 hints:
 - Create an app
 startFlow:
