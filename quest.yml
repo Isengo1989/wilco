@@ -12,7 +12,7 @@ skills:
 - frontend
 - backend
 - app
-repository: https://github.com/Isengo1989/Dev
+repository: https://github.com/Isengo1989/devcontainer
 frameworks:
   backend:
     - php
